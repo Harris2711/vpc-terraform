@@ -1,5 +1,5 @@
 resource "aws_vpc" "demo-vpc" {
-  cidr_block       = "10.0.0.0/16"
+  cidr_block       = "mention cidr block for vpc"
   instance_tenancy = "default"
 
   tags = {
@@ -17,7 +17,7 @@ resource "aws_internet_gateway" "my-igw" {
 
 resource "aws_subnet" "pub-1a" {
   vpc_id     = aws_vpc.demo-vpc.id
-  cidr_block = "10.0.1.0/24"
+  cidr_block = "mention subnet cidr for subnet"
 
   tags = {
     Name = "pub-1a"
@@ -26,7 +26,7 @@ resource "aws_subnet" "pub-1a" {
 
 resource "aws_subnet" "pub-1b" {
   vpc_id     = aws_vpc.demo-vpc.id
-  cidr_block = "10.0.2.0/24"
+  cidr_block = "mention subnet cidr for subnet"
 
   tags = {
     Name = "pub-1b"
@@ -35,7 +35,7 @@ resource "aws_subnet" "pub-1b" {
 
 resource "aws_subnet" "priv-1a" {
   vpc_id     = aws_vpc.demo-vpc.id
-  cidr_block = "10.0.3.0/24"
+  cidr_block = "mention subnet cidr for subnet"
 
   tags = {
     Name = "priv-1a"
@@ -44,7 +44,7 @@ resource "aws_subnet" "priv-1a" {
 
 resource "aws_subnet" "priv-1b" {
   vpc_id     = aws_vpc.demo-vpc.id
-  cidr_block = "10.0.4.0/24"
+  cidr_block = "mention subnet cidr for subnet"
 
   tags = {
     Name = "priv-1b"
